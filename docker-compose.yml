@@ -2,7 +2,9 @@ version: '2'
 services:
 
   php:
-    build: resources/docker/dev/php
+    build: 
+      context: ./resources/docker/dev/php
+      dockerfile: php74.dockerfile
     container_name: ddd_cms_php7
     volumes:
       - ".:/app"
